@@ -8,7 +8,7 @@
       [
         "bash",
         "-c",
-        "cd source; ./configure --prefix #{self.install} CXXFLAGS='-std=c++11' #{os == 'windows' ? '--host x64_86-w64-mingw32': ''} --disable-samples --disable-tests --enable-static --with-library-bits=64"
+        "cd source; ./configure --prefix #{self.install} CXXFLAGS='-std=c++11' #{os == 'windows' ? '--host x86_64-w64-mingw32': ''} --disable-samples --disable-tests --enable-static --with-library-bits=64"
       ],
       "bash -c 'cd source; make -j#{self.jobs}'"
     ],

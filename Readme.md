@@ -1,8 +1,8 @@
 [![Build and test the esy package](https://github.com/esy-packages/template/actions/workflows/workflow.yml/badge.svg)](https://github.com/esy-packages/template/actions/workflows/workflow.yml)
 
-# esy-hello
+# esy-icu4c
 
-`esy-hello` is sample package, [`hello`](https://github.com/esy/test-hello-c), packaged for [`esy`](https://esy.sh/).
+`esy-icu4c` is the package, [`icu4c`](https://unicode-org.github.io/icu/userguide/icu4c/), packaged for [`esy`](https://esy.sh/).
 
 ## Why
 `esy` can not only fetch and install Reason and OCaml libraries and tools,
@@ -12,22 +12,22 @@ etc. Users don't have to install them separately, nor have to worry if
 they have installed the correct version. Read more at the docs about
 [benefits for opting for esy packages](https://esy.sh#TODO).
 
-## How to use `esy-hello`?
+## How to use `esy-icu4c`?
 
-`esy-hello` can be used from both NPM and directly from Github.
+`esy-icu4c` can be used from both NPM and directly from Github.
 
 ### From NPM 
 
-`esy-hello` is deployed on NPM can be found
+`esy-icu4c` is deployed on NPM can be found
 [here](https://www.npmjs.com/package/TODO).
 
-You can simply run `esy add esy-hello` to install it, or specify it in
+You can simply run `esy add esy-icu4c` to install it, or specify it in
 `package.json` and run `esy`.
 
 ```diff
 {
   "dependencies": {
-+   "esy-hello": "*"
++   "esy-icu4c": "*"
   }
 }
 ```
@@ -37,7 +37,7 @@ You can simply run `esy add esy-hello` to install it, or specify it in
 ```json
 {
   "dependencies": {
-    "esy-hello": "esy-packages/esy-hello"
+    "esy-icu4c": "esy-packages/esy-icu4c"
   }
 }
 ```
@@ -48,7 +48,7 @@ To use a specific commit,
 
 ```diff
   "dependencies": {
-+   "esy-hello": "esy-packages/esy-hello#<commit hash>"
++   "esy-icu4c": "esy-packages/esy-icu4c#<commit hash>"
   }
 ```
 
@@ -123,7 +123,7 @@ package with a `package.json` or `esy.json` depends on it.
 ```json
 {
   "dependencies": {
-    esy-hello": "*"
+    esy-icu4c": "*"
   }
 }
 ```

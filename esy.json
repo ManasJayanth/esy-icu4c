@@ -1,21 +1,20 @@
 {
-  "//": "Keys that start with // are ignored",
-  "name": "esy-hello",
-  "version": "0.0.1000",
-  "// version": "See readme and docs on how to version packages",
-  "description": "hello packaged for esy",
-  "source": "https://github.com/esy/test-hello-c/archive/0.1.0.zip#sha256:e1bd9924eb5d97d99c9b87f9a4a95b734e111cd6dd01464358029c751d57d693",
+  "name": "esy-icu4c",
+  "version": "74.2.0",
+  "description": "esy-icu4c packaged for esy",
+  "source": "https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.tgz#sha256:68db082212a96d6f53e35d60f47d38b962e9f9d207a74cfac78029ae8ff5e08c",
   "override": {
-    "buildEnv": {
-      "//": "Only for illustrative purpose. Not a real, useful package",
-      "PREFIX": "$cur__install",
-      "CC_PREFIX": "#{os == 'windows' ? 'x86_64-w64-mingw32-': '' }"
-    },
-    "build": ["./configure", "make"],
-    "install": "make install",
+    "build": [
+      [
+        "bash",
+        "-c",
+        "cd source; ./configure --prefix #{self.install} CXXFLAGS='-std=c++11' #{os == 'windows' ? '--host x64_86-w64-mingw32': ''} --disable-samples --disable-tests --enable-static --with-library-bits=64"
+      ],
+      "bash -c 'cd source; make -j#{self.jobs}'"
+    ],
+    "install": "bash -c 'cd source; make install'",
     "buildsInSource": true,
     "exportedEnv": {
-      "//": "This is just an example",
       "PKG_CONFIG_PATH": {
         "val": "#{self.lib / 'pkgconfig'}",
         "scope": "global"

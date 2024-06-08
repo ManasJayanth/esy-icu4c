@@ -1,4 +1,4 @@
-[![Build and test the esy package](https://github.com/esy-packages/template/actions/workflows/workflow.yml/badge.svg)](https://github.com/esy-packages/template/actions/workflows/workflow.yml)
+[![Build and test the esy package](https://github.com/ManasJayanth/esy-icu4c/actions/workflows/workflow.yml/badge.svg)](https://github.com/ManasJayanth/esy-icu4c/actions/workflows/workflow.yml)
 
 # esy-icu4c
 
